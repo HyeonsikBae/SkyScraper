@@ -6,17 +6,17 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 14:46:18 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 16:01:36 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 16:07:53 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 int		g_size;
-int		*top;
-int		*bottom;
-int		*left;
-int		*right;
+int		*g_top;
+int		*g_bottom;
+int		*g_left;
+int		*g_right;
 int		**initcell(int size);
 void	clueallocate(int *clue);
 
@@ -26,10 +26,10 @@ int		**solve(char *clue, int **answer, int size)
 	int i;
 
 	g_size = size;
-	top = (int*)malloc(sizeof(int) * g_size);
-	bottom = (int*)malloc(sizeof(int) * g_size);
-	left = (int*)malloc(sizeof(int) * g_size);
-	right = (int*)malloc(sizeof(int) * g_size);
+	g_top = (int*)malloc(sizeof(int) * g_size);
+	g_bottom = (int*)malloc(sizeof(int) * g_size);
+	g_left = (int*)malloc(sizeof(int) * g_size);
+	g_right = (int*)malloc(sizeof(int) * g_size);
 	**board = initcell(g_size);
 	answer = initcell(g_size);
 	clueallocate(clue);
@@ -39,10 +39,10 @@ int		**solve(char *clue, int **answer, int size)
 		backtracking(board);
 		i++;
 	}
-	free(top);
-	free(bottom);
-	free(left);
-	free(right);
+	free(g_top);
+	free(g_bottom);
+	free(g_left);
+	free(g_right);
 	return (answer);
 }
 
@@ -80,10 +80,10 @@ void	clueallocate(char *clue)
 	i = 0;
 	while (i < g_size)
 	{
-		top[i] = (int)(clue[i] - '0');
-		bottom[i] = (int)(clue[i + 4] - '0');
-		left[i] = (int)(clue[i + 8] - '0');
-		right[i] = (int)(clue[i + 12] - '0');
+		g_top[i] = (int)(clue[i] - '0');
+		g_bottom[i] = (int)(clue[i + 4] - '0');
+		g_left[i] = (int)(clue[i + 8] - '0');
+		g_right[i] = (int)(clue[i + 12] - '0');
 		i++;
 	}
 }
