@@ -13,6 +13,7 @@
 #include <stdlib.h>
 
 int		*findemptycell(int **board);
+int		backagain(int **board, int row, int col);
 
 int		g_size;
 int		**g_answer;
@@ -53,8 +54,8 @@ int		backagain(int **board, int row, int col)
 	guess = 0;
 	while (guess < g_size)
 	{
-		borad[row][col] = guess;
-		safe = checkconflict(borad, row, col, guess);
+		board[row][col] = guess;
+		safe = checkconflict(board, row, col, guess);
 		if (safe == 1)
 		{
 			if (backtracking(board, g_answer, g_size) == 1)
