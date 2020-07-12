@@ -9,7 +9,8 @@
 /*   Updated: 2020/07/12 19:57:33 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+int		count1(int *buildings);
+int		count2(int *buildings);
 int		viewcount(int forward, int *buildings)
 {
 	int count;
