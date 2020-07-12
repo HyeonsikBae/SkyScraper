@@ -6,11 +6,12 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 14:46:18 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 17:07:29 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 18:34:48 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "backtracking.h"
 
 int		g_size;
 int		*g_top;
@@ -36,7 +37,7 @@ int		**solve(char *clue, int **answer, int size)
 	i = 0;
 	while (i < g_size)
 	{
-		backtracking(board);
+		backtracking(board, answer, g_size);
 		i++;
 	}
 	free(g_top);

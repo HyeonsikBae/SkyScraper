@@ -6,7 +6,7 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 17:10:01 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 18:27:56 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 18:38:33 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,9 @@ int		*findemptycell(int **board)
 				emptycell[1] = j;
 				return (emptycell);
 			}
-			return (emptycell);
+			j++;
 		}
+		i++;
 	}
+	return (emptycell);
 }
