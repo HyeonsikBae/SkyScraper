@@ -6,7 +6,7 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 14:46:18 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 16:07:53 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 17:07:29 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		*g_bottom;
 int		*g_left;
 int		*g_right;
 int		**initcell(int size);
-void	clueallocate(int *clue);
+void	clueallocate(char *clue);
 
 int		**solve(char *clue, int **answer, int size)
 {
@@ -30,7 +30,7 @@ int		**solve(char *clue, int **answer, int size)
 	g_bottom = (int*)malloc(sizeof(int) * g_size);
 	g_left = (int*)malloc(sizeof(int) * g_size);
 	g_right = (int*)malloc(sizeof(int) * g_size);
-	**board = initcell(g_size);
+	board = initcell(g_size);
 	answer = initcell(g_size);
 	clueallocate(clue);
 	i = 0;
