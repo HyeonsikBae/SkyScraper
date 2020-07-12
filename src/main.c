@@ -6,7 +6,7 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 14:28:03 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 20:08:23 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 20:28:24 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,23 @@ int		main(int argc, char *argv[])
 {
 	int	**answer;
 	int size;
+	int i;
+	int j;
 
 	size = ft_sqrt(argc - 1);
 	g_size = size;
+	i = 0;
+	while (i < g_size)
+	{
+		j = 0;
+		while (j < g_size)
+		{
+			if (argv[i][j] <= 0)
+				return (0);
+			j++;
+		}
+		i++;
+	}
 	answer = solve(argv, g_size);
 	print(answer);
 	return (0);
