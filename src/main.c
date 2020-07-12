@@ -6,7 +6,7 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 14:28:03 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 22:23:38 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 22:34:11 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		main(int argc, char *argv[])
 		}
 		i++;
 	}
-	answer = solve(argv, g_size);
-	print(answer);
+	answer = solve(*argv, g_size);
+	ft_print(answer, g_size);
 	return (0);
 }
