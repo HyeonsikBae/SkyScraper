@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   solve.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/12 14:28:03 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 14:42:52 by hybae            ###   ########.fr       */
+/*   Created: 2020/07/12 14:46:18 by hybae             #+#    #+#             */
+/*   Updated: 2020/07/12 14:57:29 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_math.h"
-#include "ft_print.h"
+#include <stdlib.h>
 
-int		main(int argc, char *argv[])
+int		**initcell(int size)
 {
-	int i;
-	int	**answer;
-	int size;
+	int	**puzzle;
+	int	i;
+	int	j;
 
-	size = ft_sqrt(argc - 1);
-	printf("%d",size);
-	return (0);
+	puzzle = (int**)malloc(sizeof(int*) * size);
+	i = 0;
+	while (i < size)
+	{
+		puzzle[i] = (int*)malloc(sizeof(int) * size);
+		i++;
+	}
+	i = 0;
+	while (i < size)
+	{
+		j = 0;
+		while (j < size)
+		{
+			puzzle[i][j] = 0;
+			j++;
+		}
+		i++;
+	}
+	return (puzzle);
 }
