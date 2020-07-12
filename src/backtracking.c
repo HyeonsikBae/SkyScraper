@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "check.h"
 
 int		*findemptycell(int **board);
 int		backagain(int **board, int row, int col);
