@@ -6,12 +6,13 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 14:28:03 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 20:28:24 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 22:04:55 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
 #include "ft_print.h"
+#include "solver.h"
 
 int		g_size;
 

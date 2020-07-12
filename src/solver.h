@@ -1,3 +1,3 @@
-int		**solve(char, int, int);
+int		**solve(char*, int**, int);
 int		**initcell(int);
-void	clueallocate(char);
+void	clueallocate(char*);
