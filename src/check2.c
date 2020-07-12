@@ -6,11 +6,13 @@
 /*   By: hybae <gustlr0217@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 19:34:57 by hybae             #+#    #+#             */
-/*   Updated: 2020/07/12 21:57:41 by hybae            ###   ########.fr       */
+/*   Updated: 2020/07/12 22:28:43 by hybae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int		count1(int *buildings);
 int		count2(int *buildings);
+int		g_size;
+
 int		viewcount(int forward, int *buildings)
 {
 	int count;
